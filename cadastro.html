@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Notícias</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            LOGO
+        </div>
+        <button class="btn-toggle" onclick="teste('nav')">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav id="nav" >
+            <ul>
+                <li><a href="cadastro.html">CADASTRAR NOTÍCIAS</a></li>
+                <li><a href="index.html">EXÍBIR NOTÍCIAS</a></li>  
+                <form >
+                    <input id="input-busca" type="text" name="busca">
+                    <button id="btn-search"type="submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="conteudo">
+            <h3>Cadastro de Notícias</h3>
+            <form method="POST" action="cadastro.php">
+                <input class="input-noticia" type="text" placeholder="Título da notícia" name="titulo">
+                <input class="input-noticia" type="text" placeholder="Categoria da notícia" name="categoria">
+                <textarea class="textarea-noticia"  placeholder="Conteudo da notícia" name="conteudo"></textarea>
+                <button id="btn-cadastrar" type="submit">Cadastrar</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            Todos direitos
+        </div>
+    </footer>
+</body>
+<script>
+    function teste(id){
+        document.getElementById(id).classList.toggle('dis-flex');
+    }
+</script>
+
+</html>
